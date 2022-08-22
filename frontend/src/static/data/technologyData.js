@@ -79,4 +79,39 @@ export const TechnologyData = {
         name : "DataStore",
         version : "1.1.0"
     },
+
+    shell : {
+        name : "Shell",
+        version : "latest"
+    },
+
+    postgres_1_1_0 : {
+        name : "PostgreSQL",
+        version : "1.1.0"
+    },
+
+    amqp_1_0_0 : {
+        name : "AMQP",
+        version : "1.0.0"
+    },
+
+    grpc_1_45_0 : {
+        name : "gRPC",
+        version : "1.45.0"
+    },
+
+    firestore_1_1_0 : {
+        name : "Firestore",
+        version : "1.1.0"
+    },
+
+    firestore_1_6_1 : {
+        name : "Firestore",
+        version : "1.6.1"
+    },
+
+    bigquery_1_12_0 : {
+        name : "BigQuery",
+        version : "1.12.0"
+    }
 }

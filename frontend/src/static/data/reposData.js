@@ -256,4 +256,351 @@ export const reposData = [
             ]
         }
     },
+
+
+
+    {
+        name: "App certificates",
+        subtitle: "This repository contains all the certificates",
+        githubLink: "https://github.com/avenuesec/app_certificates",
+
+        observations: {
+            isEmpty: false,
+            branchMainIsUpdated: true,
+            readmeIsUpdated: true,
+
+            suggestionsList: [],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "",
+            list: []
+        }
+    },
+
+
+
+    {
+        name: "Argocd",
+        subtitle: "...",
+        githubLink: "https://github.com/avenuesec/argocd",
+
+        observations: {
+            isEmpty: false,
+            branchMainIsUpdated: true,
+            readmeIsUpdated: true,
+
+            suggestionsList: [],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "",
+            list: [
+                TechnologyData.shell
+            ]
+        }
+    },
+
+
+
+    {
+        name: "Atlantis",
+        subtitle: "...",
+        githubLink: "https://github.com/avenuesec/atlantis",
+
+        observations: {
+            isEmpty: false,
+            branchMainIsUpdated: true,
+            readmeIsUpdated: true,
+
+            suggestionsList: [],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "",
+            list: [
+                TechnologyData.shell
+            ]
+        }
+    },
+
+
+
+    {
+        name: "Avenue RFCs",
+        subtitle: "This repository holds the Request for Comments (RFCs) for Avenue",
+        githubLink: "https://github.com/avenuesec/avenue-rfcs",
+
+        observations: {
+            isEmpty: false,
+            branchMainIsUpdated: true,
+            readmeIsUpdated: true,
+
+            suggestionsList: [],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "",
+            list: []
+        }
+    },
+
+
+
+    {
+        name: "Backend Dev Test",
+        subtitle: "Receive data and store in a safe repository",
+        githubLink: "https://github.com/avenuesec/backend-dev-test",
+
+        observations: {
+            isEmpty: false,
+            branchMainIsUpdated: true,
+            readmeIsUpdated: true,
+
+            suggestionsList: [],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "",
+            list: []
+        }
+    },
+
+
+
+    {
+        name: "Banking",
+        subtitle: "Manager banking features, such as card and account management and transactions authorizations",
+        githubLink: "https://github.com/avenuesec/banking",
+
+        observations: {
+            isEmpty: false,
+            branchMainIsUpdated: true,
+            readmeIsUpdated: true,
+
+            suggestionsList: [],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "https://github.com/avenuesec/banking/blob/dev/go.mod",
+            list: [
+                TechnologyData.golang_1_18,
+                TechnologyData.protobuf_1_28_0,
+                TechnologyData.postgres_1_1_0
+            ]
+        }
+    },
+
+
+
+    {
+        name: "Banking Web",
+        subtitle: "...",
+        githubLink: "https://github.com/avenuesec/banking-web",
+
+        observations: {
+            isEmpty: true,
+            branchMainIsUpdated: false,
+            readmeIsUpdated: false,
+
+            suggestionsList: [],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "https://github.com/avenuesec/banking-web",
+            list: []
+        }
+    },
+
+
+
+    {
+        name: "Bexs Contracts",
+        subtitle: "...",
+        githubLink: "https://github.com/avenuesec/bexs-contracts",
+
+        observations: {
+            isEmpty: true,
+            branchMainIsUpdated: false,
+            readmeIsUpdated: false,
+
+            suggestionsList: [],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "https://github.com/avenuesec/bexs-contracts",
+            list: []
+        }
+    },
+
+
+
+    {
+        name: "Bonds",
+        subtitle: "...",
+        githubLink: "https://github.com/avenuesec/bonds",
+
+        observations: {
+            isEmpty: false,
+            branchMainIsUpdated: false,
+            readmeIsUpdated: false,
+
+            suggestionsList: [],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "https://github.com/avenuesec/bonds/blob/main/go.mod",
+            list: [
+                TechnologyData.golang_1_18,
+                TechnologyData.protobuf_1_28_0,
+                TechnologyData.amqp_1_0_0
+            ]
+        }
+    },
+
+
+
+    {
+        name: "BrBroker",
+        subtitle: "...",
+        githubLink: "https://github.com/avenuesec/brbroker",
+
+        observations: {
+            isEmpty: false,
+            branchMainIsUpdated: false,
+            readmeIsUpdated: false,
+
+            suggestionsList: [],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "https://github.com/avenuesec/brbroker/blob/main/go.mod",
+            list: [
+                TechnologyData.golang_1_17,
+                TechnologyData.protobuf_1_28_0,
+                TechnologyData.grpc_1_45_0
+            ]
+        }
+    },
+
+
+
+    {
+        name: "BrBroker Contracts",
+        subtitle: "...",
+        githubLink: "https://github.com/avenuesec/brbroker-contracts",
+
+        observations: {
+            isEmpty: false,
+            branchMainIsUpdated: true,
+            readmeIsUpdated: false,
+
+            suggestionsList: [],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "https://github.com/avenuesec/brbroker-contracts/blob/main/go.mod",
+            list: [
+                TechnologyData.golang_1_18,
+                TechnologyData.protobuf_1_28_0,
+                TechnologyData.gRPC_1_39_0
+            ]
+        }
+    },
+
+
+
+    {
+        name: "BrBroker Migrator",
+        subtitle: "...",
+        githubLink: "https://github.com/avenuesec/brbroker-migrator",
+
+        observations: {
+            isEmpty: false,
+            branchMainIsUpdated: true,
+            readmeIsUpdated: false,
+
+            suggestionsList: [],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "https://github.com/avenuesec/brbroker-migrator/blob/master/go.work.sum",
+            list: [
+                TechnologyData.golang_1_18,
+                TechnologyData.firestore_1_1_0,
+                TechnologyData.bigquery_1_12_0
+            ]
+        }
+    },
+
+
+
+    {
+        name: "BrBroker Dtvm Ted Worker",
+        subtitle: "Make TED inside DTVM",
+        githubLink: "https://github.com/avenuesec/brbroker.dtvm.ted-worker",
+
+        observations: {
+            isEmpty: true,
+            branchMainIsUpdated: false,
+            readmeIsUpdated: false,
+
+            suggestionsList: [],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "",
+            list: []
+        }
+    },
+
+
+
+    {
+        name: "CLI",
+        subtitle: "Avenue CLI",
+        githubLink: "https://github.com/avenuesec/cli",
+
+        observations: {
+            isEmpty: false,
+            branchMainIsUpdated: true,
+            readmeIsUpdated: true,
+
+            suggestionsList: [],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "https://github.com/avenuesec/cli/blob/main/go.mod",
+            list: [
+                TechnologyData.golang_1_18,
+                TechnologyData.amqp_1_0_0,
+                TechnologyData.firestore_1_6_1
+            ]
+        }
+    },
+
+
+
+    {
+        name: "Common [Continuar a preencher]",
+        subtitle: "...",
+        githubLink: "https://github.com/avenuesec/common",
+
+        observations: {
+            isEmpty: false,
+            branchMainIsUpdated: true,
+            readmeIsUpdated: true,
+
+            suggestionsList: [],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "https://github.com/avenuesec/cli/blob/main/go.mod",
+            list: [
+                TechnologyData.golang_1_18,
+                TechnologyData.amqp_1_0_0,
+                TechnologyData.firestore_1_6_1
+            ]
+        }
+    },
 ]
