@@ -1,108 +1,91 @@
 import Accordion from 'react-bootstrap/Accordion';
 import { reposData } from '../static/data/reposData';
 import Table from 'react-bootstrap/Table';
-import Container from 'react-bootstrap/Container';
+import InputGroup from 'react-bootstrap/InputGroup';
 import Navbar from 'react-bootstrap/Navbar';
-import Stack from 'react-bootstrap/Stack';
+import Col from 'react-bootstrap/Col';
 import Alert from 'react-bootstrap/Alert';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import Toast from 'react-bootstrap/Toast';
 
 export const IndexView = _ => {
     return (
         <div className='index-view'>
-            <Navbar bg="dark">
-                <Container>
-                    <Navbar.Brand className='text-light'>Avenue</Navbar.Brand>
-                </Container>
+            <Navbar bg="dark py-4">
             </Navbar>
 
-            {
-                reposData.map((repo, i) => (
-                    <div className='list-item m-5 bordered bordered'>
-                        <Stack
-                            className='item-header bg-dark text-light p-3'
-                            direction="horizontal"
-                            gap={3}
-                        >
-                            <div>
-                                <h3 className="m-0">{repo.name}</h3>
-                                <small className="text-muted">{repo.subtitle}</small>
-                            </div>
+            <h1 className='text-center m-5'>Avenue</h1>
 
-                            <a className='ms-auto' href={repo.githubLink}>Github</a>
-                        </Stack>
+            <InputGroup className="w-50 mx-auto my-5">
+                <Form.Control
+                    placeholder="Search..."
+                    aria-label="Search..."
+                />
+                <InputGroup.Text>Enviar</InputGroup.Text>
+            </InputGroup>
 
-                        <div className="item-content">
-                            {
-                                repo.observations.isEmpty &&
-                                <Alert key={i} variant={"danger"}>
-                                    <b>Importante!</b> Este repositório está vazio
-                                </Alert>
-                            }
+            <Accordion defaultActiveKey={0} className="mx-5">
+                {
+                    reposData.map((r, index) => (
+                        <Accordion.Item eventKey={index}>
+                            <Accordion.Header>
+                                <p>
+                                    <b>{r.name}</b>
+                                    <br />
+                                    <small className="text-muted">{r.subtitle}</small>
+                                </p>
+                            </Accordion.Header>
 
-                            {
-                                !repo.observations.branchMainIsUpdated &&
-                                <Alert key={i} variant={"warning"}>
-                                    <b>Alerta!</b> A branch main está desatualizada
-                                </Alert>
-                            }
+                            <Accordion.Body>
+                                {
+                                    r.observations.isEmpty &&
+                                    <Alert variant='danger'>
+                                        <b>Importante!</b> <br /> Repositorio esta vazio
+                                    </Alert>
+                                }
 
-                            {
-                                !repo.observations.readmeIsUpdated &&
-                                <Alert key={i} variant={"warning"}>
-                                    <b>Alerta!</b> O readme está desatualizado
-                                </Alert>
-                            }
+                                {
+                                    r.observations.branchMainIsUpdated &&
+                                    <Alert variant='warning'>
+                                        <b>Alerta!</b> <br /> A branch main nao esta atualizada
+                                    </Alert>
+                                }
 
-                            <Table striped bordered hover className='mt-2'>
-                                <thead>
-                                    <tr>
-                                        <th colSpan={12}>Tecnologias</th>
-                                    </tr>
-                                </thead>
+                                {
+                                    r.observations.readmeIsUpdated &&
+                                    <Alert variant='warning'>
+                                        <b>Alerta!</b> <br /> README nao esta atualizado
+                                    </Alert>
+                                }
 
-                                <tbody>
-                                    {
+                                {
+                                    r.technologies.list.length > 0 &&
+                                    <div className='mt-5'>
+                                        <h4>Tecnologias</h4>
+                                        <Toast show={true} className="w-100">
+                                            {
+                                               r.technologies.list.map((technology, k)=> (
+                                                <Toast.Body>
+                                                    {
+                                                        k >= r.technologies.list.length - 1 ?
+                                                        <a href={r.technologies.dependenciesPackageLink} target="_blank">Ver mais</a>
 
-                                        repo.technologies.list.map((tech, i) => (
-                                            <tr>
-                                                <td>{tech.name}</td>
-                                                <td>{tech.version}</td>
-                                            </tr>
-                                        ))
-                                    }
-                                </tbody>
-                            </Table>
+                                                        :
 
-
-                            <Table striped bordered hover className='mt-2'>
-                                <thead>
-                                    <tr>
-                                        <th colSpan={12}>
-                                            Anotações
-                                            <br />
-                                            <small className="fw-light text-muted">Por: Carlos Amaral</small>
-                                        </th>
-                                    </tr>
-                                </thead>
-
-                                <tbody>
-                                    {
-
-                                        repo.observations.suggestionsList.map((note, i) => (
-                                            <tr>
-                                                <td>{note}</td>
-                                            </tr>
-                                        ))
-                                    }
-                                </tbody>
-                            </Table>
-
-                        </div>
-
-
-                    </div>
-                ))
-            }
+                                                        <p>Name</p>
+                                                    }
+                                                </Toast.Body>
+                                               ))
+                                            }
+                                        </Toast>
+                                    </div>
+                                }
+                            </Accordion.Body>
+                        </Accordion.Item>
+                    ))
+                }
+            </Accordion>
         </div>
     )
 }

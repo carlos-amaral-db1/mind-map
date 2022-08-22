@@ -582,9 +582,136 @@ export const reposData = [
 
 
     {
-        name: "Common [Continuar a preencher]",
+        name: "Common",
         subtitle: "...",
         githubLink: "https://github.com/avenuesec/common",
+
+        observations: {
+            isEmpty: false,
+            branchMainIsUpdated: true,
+            readmeIsUpdated: true,
+
+            suggestionsList: [
+                "Readme está atualizado, porém, uma sugestão seria conter qual é a responsabilidade do repositório"
+            ],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "https://github.com/avenuesec/common/blob/main/go.mod",
+            list: [
+                TechnologyData.golang_1_18,
+                TechnologyData.bigquery_1_12_0,
+                TechnologyData.protobuf_1_28_0
+            ]
+        }
+    },
+
+
+
+    {
+        name: "Conciliation",
+        subtitle: "...",
+        githubLink: "https://github.com/avenuesec/conciliation",
+
+        observations: {
+            isEmpty: false,
+            branchMainIsUpdated: true,
+            readmeIsUpdated: false,
+
+            suggestionsList: [],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "https://github.com/avenuesec/conciliation/blob/main/go.mod",
+            list: [
+                TechnologyData.golang_1_16,
+                TechnologyData.postgres_1_1_0,
+                TechnologyData.protobuf_1_27_1
+            ]
+        }
+    },
+
+
+
+    {
+        name: "Cross",
+        subtitle: "Supporting services that are used across the platform, but don't belong in a specific product line",
+        githubLink: "https://github.com/avenuesec/cross",
+
+        observations: {
+            isEmpty: false,
+            branchMainIsUpdated: true,
+            readmeIsUpdated: false,
+
+            suggestionsList: [],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "https://github.com/avenuesec/cross/blob/dev/go.mod",
+            list: [
+                TechnologyData.golang_1_18,
+                TechnologyData.mysql_1_5_0,
+                TechnologyData.gRPC_1_39_0
+            ]
+        }
+    },
+
+
+
+    {
+        name: "Crypto",
+        subtitle: "...",
+        githubLink: "https://github.com/avenuesec/crypto",
+
+        observations: {
+            isEmpty: false,
+            branchMainIsUpdated: true,
+            readmeIsUpdated: false,
+
+            suggestionsList: [],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "https://github.com/avenuesec/crypto/blob/dev/go.mod",
+            list: [
+                TechnologyData.golang_1_18,
+                TechnologyData.gRPC_1_47_0,
+                TechnologyData.protobuf_1_28_0
+            ]
+        }
+    },
+
+
+
+    {
+        name: "Crypto Intranet",
+        subtitle: "...",
+        githubLink: "https://github.com/avenuesec/crypto-intranet",
+
+        observations: {
+            isEmpty: false,
+            branchMainIsUpdated: true,
+            readmeIsUpdated: false,
+
+            suggestionsList: [],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "https://github.com/avenuesec/crypto-intranet/blob/main/package.json",
+            list: [
+                TechnologyData.react_11_7_1,
+                TechnologyData.auth0_react_1_8_0,
+                TechnologyData.axios_0_24_0
+            ]
+        }
+    },
+
+
+
+    {
+        name: "Dart Event Source",
+        subtitle: "W3C EventSource client implementation for Dart / Flutter, to communicate with server-sent event endpoints",
+        githubLink: "https://github.com/avenuesec/dart-event-source",
 
         observations: {
             isEmpty: false,
@@ -595,11 +722,342 @@ export const reposData = [
         },
 
         technologies: {
-            dependenciesPackageLink: "https://github.com/avenuesec/cli/blob/main/go.mod",
+            dependenciesPackageLink: "https://github.com/avenuesec/dart-event-source/blob/default/pubspec.yaml",
+            list: [
+                TechnologyData.dart,
+            ]
+        }
+    },
+
+
+
+    {
+        name: "Data",
+        subtitle: "...",
+        githubLink: "https://github.com/avenuesec/data",
+
+        observations: {
+            isEmpty: false,
+            branchMainIsUpdated: true,
+            readmeIsUpdated: false,
+
+            suggestionsList: [],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "",
+            list: []
+        }
+    },
+
+
+
+    {
+        name: "Datalake Ingestion Framework",
+        subtitle: "Notebooks from the datalake ingestion framework, a set of classes to help creating data ingestion and data processing pipelines fast.",
+        githubLink: "https://github.com/avenuesec/datalake-ingestion-framework",
+
+        observations: {
+            isEmpty: false,
+            branchMainIsUpdated: true,
+            readmeIsUpdated: true,
+
+            suggestionsList: [
+                "Sugiro colocar o textro do arquivo: Regras_arquitetura.py em um .md para ficar mais visual",
+                "Remover o TODO do arquivo de arquitetura, sugiro criar um .todo ou um board para colocar a lista de pendencia"
+            ],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "",
+            list: [
+                TechnologyData.python
+            ]
+        }
+    },
+
+
+
+    {
+        name: "Datastore Emulator",
+        subtitle: "...",
+        githubLink: "https://github.com/avenuesec/datastore-emulator",
+
+        observations: {
+            isEmpty: false,
+            branchMainIsUpdated: false,
+            readmeIsUpdated: false,
+
+            suggestionsList: [],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "",
+            list: []
+        }
+    },
+
+
+
+    {
+        name: "Devops",
+        subtitle: "...",
+        githubLink: "https://github.com/avenuesec/devops",
+
+        observations: {
+            isEmpty: false,
+            branchMainIsUpdated: true,
+            readmeIsUpdated: false,
+
+            suggestionsList: [],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "",
+            list: [
+                TechnologyData.shell
+            ]
+        }
+    },
+
+
+
+    {
+        name: "Devops Secrets",
+        subtitle: "...",
+        githubLink: "https://github.com/avenuesec/devops-secrets",
+
+        observations: {
+            isEmpty: false,
+            branchMainIsUpdated: true,
+            readmeIsUpdated: true,
+
+            suggestionsList: [],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "",
+            list: [
+                TechnologyData.shell
+            ]
+        }
+    },
+
+
+
+    {
+        name: "Evolve Contracts",
+        subtitle: "...",
+        githubLink: "https://github.com/avenuesec/evolve-contracts",
+
+        observations: {
+            isEmpty: false,
+            branchMainIsUpdated: true,
+            readmeIsUpdated: false,
+
+            suggestionsList: [],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "https://github.com/avenuesec/evolve-contracts/blob/main/go.mod",
             list: [
                 TechnologyData.golang_1_18,
-                TechnologyData.amqp_1_0_0,
-                TechnologyData.firestore_1_6_1
+                TechnologyData.protobuf_1_28_0,
+                TechnologyData.grpc_1_46_2
+            ]
+        }
+    },
+
+
+
+    {
+        name: "Exchange Tracker",
+        subtitle: "...",
+        githubLink: "https://github.com/avenuesec/exchange-tracker",
+
+        observations: {
+            isEmpty: false,
+            branchMainIsUpdated: true,
+            readmeIsUpdated: false,
+
+            suggestionsList: [
+                "Applications Properties vazio"
+            ],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "https://github.com/avenuesec/exchange-tracker/blob/main/build.gradle",
+            list: [
+                TechnologyData.java,
+                TechnologyData.protobuf_java_3_20_1,
+                TechnologyData.mysql_connector_java_5_1_6
+            ]
+        }
+    },
+
+
+
+    {
+        name: "Extended Masked Text",
+        subtitle: "This package is based on the source code of flutter_masked_text and is an attempt to fix some bugs and continue the development of the original one",
+        githubLink: "https://github.com/avenuesec/extended_masked_text",
+
+        observations: {
+            isEmpty: false,
+            branchMainIsUpdated: true,
+            readmeIsUpdated: true,
+
+            suggestionsList: [],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "",
+            list: []
+        }
+    },
+
+
+
+    {
+        name: "Finance",
+        subtitle: "...",
+        githubLink: "https://github.com/avenuesec/finance",
+
+        observations: {
+            isEmpty: false,
+            branchMainIsUpdated: true,
+            readmeIsUpdated: false,
+
+            suggestionsList: [],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "https://github.com/avenuesec/finance/blob/dev/go.mod",
+            list: [
+                TechnologyData.golang_1_18,
+                TechnologyData.datastore_1_3_0,
+                TechnologyData.protobuf_1_28_0
+            ]
+        }
+    },
+
+
+
+    {
+        name: "Fintechledger Beam",
+        subtitle: "O fintechledger é um Cron Job que tem por objetivo agrupar diferentes informações, de todas as contas Banking, e enviá-las ao final do processamento, à partir de arquivo JSON, para o SFTP da Evolve",
+        githubLink: "https://github.com/avenuesec/fintechledger-beam",
+
+        observations: {
+            isEmpty: false,
+            branchMainIsUpdated: true,
+            readmeIsUpdated: true,
+
+            suggestionsList: [],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "https://github.com/avenuesec/fintechledger-beam/blob/dev/pom.xml",
+            list: [
+                TechnologyData.protobuf_java_3_21_2,
+                TechnologyData.postgres_42_4_0,
+                TechnologyData.google_oauth_1_34_1
+            ]
+        }
+    },
+
+
+
+    {
+        name: "Fix Rust",
+        subtitle: "FIX (Financial Information Exchange) client in Rust",
+        githubLink: "https://github.com/avenuesec/fix-rust",
+
+        observations: {
+            isEmpty: false,
+            branchMainIsUpdated: true,
+            readmeIsUpdated: true,
+
+            suggestionsList: [
+                "Os TODOs de fato continuam precisando ser realizados?"
+            ],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "",
+            list: []
+        }
+    },
+
+
+
+    {
+        name: "Foreign Finder",
+        subtitle: "This project holds all services and jobs for B2B platform",
+        githubLink: "https://github.com/avenuesec/foreign-finder",
+
+        observations: {
+            isEmpty: false,
+            branchMainIsUpdated: true,
+            readmeIsUpdated: true,
+
+            suggestionsList: [],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "https://github.com/avenuesec/foreign-finder/blob/dev/go.mod",
+            list: [
+                TechnologyData.golang_1_18,
+                TechnologyData.protobuf_1_28_0,
+                TechnologyData.bigquery_1_18_0
+            ]
+        }
+    },
+
+    {
+        name: "Foreign Finder Web",
+        subtitle: "...",
+        githubLink: "https://github.com/avenuesec/foreign-finder-web",
+
+        observations: {
+            isEmpty: false,
+            branchMainIsUpdated: true,
+            readmeIsUpdated: false,
+
+            suggestionsList: [],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "https://github.com/avenuesec/foreign-finder-web/blob/develop/package.json",
+            list: [
+                TechnologyData.auth0_react_1_8_0,
+                TechnologyData.axios_0_24_0,
+                TechnologyData.recharts_2_1_6
+            ]
+        }
+    },
+
+
+
+    {
+        name: "Frontend",
+        subtitle: "...",
+        githubLink: "https://github.com/avenuesec/frontend",
+
+        observations: {
+            isEmpty: false,
+            branchMainIsUpdated: true,
+            readmeIsUpdated: true,
+
+            suggestionsList: [],
+        },
+
+        technologies: {
+            dependenciesPackageLink: "https://github.com/avenuesec/frontend/blob/dev/package.json",
+            list: [
+                TechnologyData.auth0_react_1_8_0,
+                TechnologyData.axios_0_24_0,
+                TechnologyData.recharts_2_1_6
             ]
         }
     },
