@@ -1,0 +1,20 @@
+{
+    name : "Nome do repositório",
+    subtitle : "Responsabilidade do repositório",
+    githubLink : "https://github.com/avenuesec",
+    
+    observations : {
+        suggestionsList : [],
+
+        isEmpty : true,
+        branchMainIsUpdated : false,
+        readmeIsUpdated : false,
+    },
+
+    technologies : {
+        dependenciesPackageLink : "https://github.com/",
+        list : [
+            TechnologyData[0], TechnologyData[1],
+        ]
+    }
+},
