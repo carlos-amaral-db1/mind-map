@@ -6,8 +6,9 @@ import Navbar from 'react-bootstrap/Navbar';
 import Col from 'react-bootstrap/Col';
 import Alert from 'react-bootstrap/Alert';
 import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+import Badge from 'react-bootstrap/Badge';
 import Toast from 'react-bootstrap/Toast';
+import { Row } from 'react-bootstrap';
 
 export const IndexView = _ => {
     return (
@@ -31,6 +32,23 @@ export const IndexView = _ => {
                         <Accordion.Item eventKey={index}>
                             <Accordion.Header>
                                 <p>
+                                    {
+                                        r.observations.isEmpty &&
+                                        <Badge bg="danger" className='mb-3 mx-1' pill>!</Badge>
+                                    }
+
+                                    {
+                                        r.observations.readmeIsUpdated &&
+                                        <Badge bg="warning" className='mb-3 mx-1' pill>!</Badge>
+                                    }
+
+                                    {
+                                        r.observations.branchMainIsUpdated &&
+                                        <Badge bg="warning" className='mb-3 mx-1' pill>!</Badge>
+                                    }
+                                    
+                                    <br />
+
                                     <b>{r.name}</b>
                                     <br />
                                     <small className="text-muted">{r.subtitle}</small>
@@ -60,23 +78,37 @@ export const IndexView = _ => {
                                 }
 
                                 {
+                                    r.observations.suggestionsList.length > 0 &&
+                                    <div className='mt-5'>
+                                        <h4>Anotacoes</h4>
+                                        <Toast show={true} className="w-100">
+                                            {
+                                                r.observations.suggestionsList.map((obs, k) => (
+                                                    <Toast.Body>{obs}</Toast.Body>
+                                                ))
+                                            }
+                                        </Toast>
+                                    </div>
+                                }
+
+                                {
                                     r.technologies.list.length > 0 &&
                                     <div className='mt-5'>
                                         <h4>Tecnologias</h4>
                                         <Toast show={true} className="w-100">
                                             {
-                                               r.technologies.list.map((technology, k)=> (
-                                                <Toast.Body>
-                                                    {
-                                                        k >= r.technologies.list.length - 1 ?
-                                                        <a href={r.technologies.dependenciesPackageLink} target="_blank">Ver mais</a>
+                                                r.technologies.list.map((technology, k) => (
+                                                    <Toast.Body>
+                                                        {
+                                                            k >= r.technologies.list.length - 1 ?
+                                                                <a href={r.technologies.dependenciesPackageLink} target="_blank">Ver mais</a>
 
-                                                        :
+                                                                :
 
-                                                        <p>Name</p>
-                                                    }
-                                                </Toast.Body>
-                                               ))
+                                                                <p>Name</p>
+                                                        }
+                                                    </Toast.Body>
+                                                ))
                                             }
                                         </Toast>
                                     </div>
